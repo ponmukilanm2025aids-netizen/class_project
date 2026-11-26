@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 function Login(){
       //const[email, setEmail] = useState("");
   //const[password, setPassword] = useState("");
+  const navigate=useNavigate();
   const [formdata,setFormdata]=useState({
     username:"",
     password:""
@@ -15,7 +16,7 @@ function Login(){
 
   const handleSubmit=(Event)=>{
     Event.preventDefault();
-    const navigate=useNavigate();
+
     console.log("login",formdata)
     alert("login succefully")
     navigate("/dashboard",{state:formdata})

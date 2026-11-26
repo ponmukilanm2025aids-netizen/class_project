@@ -1,5 +1,18 @@
-function Dashboard(){
-    return(
-        <div> this is dashboard </div>
-    )
-}export default Dashboard
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
+
+function Dashboard() {
+    const loacation=useLocation();
+    const[userdata,setUserdata]=useState("");
+    function displaydata(){
+        setUserdata(location.state);
+        console.log(userdata)
+    }
+    return (
+        <>
+        <button onClick={displaydata}>button</button>
+        </>
+      );
+}
+
+export default Dashboard;
